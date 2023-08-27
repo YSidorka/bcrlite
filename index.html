@@ -5,7 +5,7 @@
 	<title>Custom page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Online Barcode Reader">
-	<meta name="keywords" content="online barcode reader simple">
+	<meta name="keywords" content="online barcode reader lite">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 				rel="stylesheet"
 				integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
@@ -17,7 +17,7 @@
 
 <nav class="navbar navbar-dark bg-primary bg-gradient mb-3">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Barcode Reader</a>
+		<a class="navbar-brand" href="#">BCRLite</a>
 	</div>
 </nav>
 
@@ -39,21 +39,17 @@
 	</div>
 </div>
 
+<script src="bcr.min.js"></script>
 <script>
   const btnStartReader = document.querySelector('button.start-reader');
   const btnStopReader = document.querySelector('button.stop-reader');
-
-  const readerEl = document.querySelector('bar-code-reader');
-
+  const bcrEl = document.querySelector('bar-code-reader');
   function sendEvent(eventName) {
     const event = new Event(eventName);
-    if (readerEl) readerEl.dispatchEvent(event);
-	}
-
+    if (bcrEl) bcrEl.dispatchEvent(event);
+  }
   btnStartReader.onclick = () => sendEvent('codeReaderInit');
   btnStopReader.onclick = () => sendEvent('codeReaderStop');
-
 </script>
-<script src="index.js"></script>
 </body>
 </html>
