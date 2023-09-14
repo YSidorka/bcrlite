@@ -1,0 +1,10 @@
+.label-barcode {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  background: none;
+  text-transform: capitalize;
+  color: #282C35;
+  font-size: 60px;
+}
+.modal-footer>button {
+  width: 30%;
+}
